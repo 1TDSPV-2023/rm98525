@@ -101,6 +101,21 @@
       console.log(nr2);
 
 
+
+
+      const botoes = document.querySelectorAll("button");
+      botoes.forEach((botao)=>{
+
+        if(botao.textContent == "CLICK"){
+            botao.addEventListener("click", ()=>{
+                alert("oi!!");
+              
+              })
+          
+        }
+
+      });
+
     </script>
 
 
