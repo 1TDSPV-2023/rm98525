@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exemplo Gitpages</title>
     <link rel="stylesheet" href="./css/estilo.css" />
+    <link rel=""
   </head>
 
   <body>
     <header class="cabecalho">
-      <img src="./img/logo.png" alt="Monigtor de computador." />
+      <img src="./img/logo.png" alt="Monitor de computador." />
       <nav>
         <a href="#">Item-1</a>
         <a href="#">Item-2</a>
@@ -19,6 +20,11 @@
     </header>
 
     <h2 class="tit-sec">Seção Foto</h2>
+
+
+    <div>
+        <button name="botao" onclick="alert(this.name)">CLICK</button>
+    </div>
 
     <section class="conteudo">
       <div>
@@ -61,24 +67,42 @@
             <legend>Contato</legend>
             <div>
               <label for="idNm">Nome</label>
-              <input type="text" name="txtNm" id="idNm" placeholder="Nome" />
+              <input type="text" name="txtNm" id="idNm" placeholder="Nome">
             </div>
             <div>
-              <label for="idNm">Nome</label>
+              <label for="idNm">Email</label>
               <input
-                type="email"
-                name="txtEmail"
-                id="idEmail"
-                placeholder="Email"
-              />
+                type="email" name="txtEmail" id="idEmail" placeholder="Email" value="email@email.com">
             </div>
             <div>
-              <input type="submit" value="Enviar" />
-              <input type="reset" value="Limpar" />
+              <input type="submit" value="Enviar">
+              <input type="reset" value="Limpar">
             </div>
           </fieldset>
         </form>
       </div>
     </footer>
+
+    <script>
+      //Comentário de linha
+      /*COmentário de bloco
+      *
+      */
+      //Declação de variaveis com a palavra reservada var
+
+      var nr1  = 10;
+      var nr2 = 5;
+
+
+
+      //Saída de dados com console.log()
+
+      console.log(nr1);
+      console.log(nr2);
+
+
+    </script>
+
+
   </body>
 </html>
