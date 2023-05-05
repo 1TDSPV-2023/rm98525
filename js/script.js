@@ -109,3 +109,10 @@ const aElements  = document.querySelectorAll("a");
 //frutas.map( (fruta,key)=>{
  //   console.log(`Fruta nr:${key+1} ${fruta}`);
 //} );
+
+
+const inputUser = document.querySelector("#idUser");
+
+inputUser.addEventListener("focus", ()=>{
+    inputUser.setAttribute("styler","outline-color: #ff0000;")
+})
