@@ -1,22 +1,35 @@
 "use strict";
 
-
-
-//CRIANDO OBJETOS
-const usuario1 = {
-    nomeUsuario : "rita-lee",
-    senhaUsuario : "00000"
-}
-
-const usuario2 = {
-    nomeUsuario : "ptt01",
-    senhaUsuario : "12345"
-} 
-
 //LISTA DE USUÁRIOS
-let listaDeUsuarios = [];
-listaDeUsuarios.push(usuario1);
-listaDeUsuarios.push(usuario2);
+let listaDeUsuarios = [
+
+    {
+        nomeCompleto : "José das Couves",
+        nomeUsuario : "jose",
+        senhaUsuario : "123456"
+    }
+    ,
+    {
+        nomeCompleto : "João Paulino",
+        nomeUsuario : "joao",
+        senhaUsuario : "123456"
+    }
+    ,
+    {
+        nomeCompleto : "Maria Tomaite",
+        nomeUsuario : "maria",
+        senhaUsuario : "123456"
+    }
+    ,
+    {
+        nomeCompleto : "Paulo da Selva",
+        nomeUsuario : "paulo",
+        senhaUsuario : "123456"
+    }
+];
+
+localStorage.setItem("listaUser" , JSON.stringify(listaDeUsuarios));
+
 
 addEventListener("click", (evento)=>{
      
@@ -39,10 +52,14 @@ addEventListener("click", (evento)=>{
 
         }
 
+
+
+    Let listaDeUsuariosRecuperada  = JSON.parse(localStorage.getItem("listaUser"));
+
         if(evento.target.id == "btnSubmit"){
         
         try{
-                listaDeUsuarios.forEach((usuario)=>{
+                listaDeUsuariosRecuperada.forEach((usuario)=>{
 
                     if(userInput.value == usuario.nomeUsuario && passInput.value == usuario.senhaUsuario){
                         throw "USUÁRIO VALIDADO!";
